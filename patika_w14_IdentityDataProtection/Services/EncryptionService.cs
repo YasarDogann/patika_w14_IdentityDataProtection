@@ -9,7 +9,7 @@ namespace patika_w14_IdentityDataProtection.Services
         // Şifreleme için bir veri koruyucu oluşturuyoruz.
         public EncryptionService(IDataProtectionProvider provider)
         {
-            _protector = provider.CreateProtector("IdentityDataProtection.EncryptionService"); // Yazım hatası düzeltildi
+            _protector = provider.CreateProtector("IdentityDataProtection.EncryptionService"); 
         }
 
         // VERİYİ ŞİFRELER
@@ -22,7 +22,7 @@ namespace patika_w14_IdentityDataProtection.Services
         }
 
         // Şifrelene veriyi çözer
-        public string Decrypt(string input)
+        public string Decrypt(string input) // Gpt ağabeyden yardım aldım beyin not found :/
         {
             if (string.IsNullOrEmpty(input))
                 throw new ArgumentException("Input cannot be null or empty", nameof(input));
@@ -33,7 +33,7 @@ namespace patika_w14_IdentityDataProtection.Services
             }
             catch (Exception ex)
             {
-                // Hata yönetimi eklenebilir.
+                // Hata yönetimi eklenebilir. (Burada beynim system Error verdi)
                 throw new InvalidOperationException("Decryption failed", ex);
             }
         }
