@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\patika_w14_IdentityDataProtection.props" />
+</Project>

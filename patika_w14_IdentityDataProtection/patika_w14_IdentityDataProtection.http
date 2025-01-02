@@ -1,0 +1,6 @@
+@patika_w14_IdentityDataProtection_HostAddress = http://localhost:5231
+
+GET {{patika_w14_IdentityDataProtection_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
